@@ -20,10 +20,8 @@ function calculate(amount, lstCheck, result) {
   if (amount == 0) return result;
   else if (lstCheck.length - 1)
     return calculate(amount, lstCheck.slice(1), result);
-  else {
-    if (amount % value) return "Invalid balance";
-    else return "Insufficient balance from ATM";
-  }
+  else if (amount % value) return "Invalid balance";
+  else return "Insufficient balance from ATM";
 }
 
 function withdraw(amount, lstCheck) {
